@@ -4,10 +4,58 @@ export function initForm() {
 
   initMenuTabs();
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (validateForm()) {
+    if (!validateForm()) return;
+
+    const submitBtn = form.querySelector('.form-submit');
+    const submitError = document.getElementById('formSubmitError');
+    if (submitError) {
+      submitError.textContent = '';
+      submitError.classList.remove('visible');
+    }
+
+    const plan = form.querySelector('input[name="plan"]:checked')?.value ?? '';
+    const diet = form.querySelector('input[name="diet"]:checked')?.value ?? '';
+
+    submitBtn.disabled = true;
+    submitBtn.classList.add('is-loading');
+
+    const payload = {
+      name: document.getElementById('name').value.trim(),
+      email: document.getElementById('email').value.trim(),
+      phone: document.getElementById('phone').value.trim(),
+      address: document.getElementById('address').value.trim(),
+      plan,
+      diet,
+      message: document.getElementById('message').value.trim(),
+    };
+
+    try {
+      const res = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      let data = {};
+      try {
+        data = await res.json();
+      } catch {
+        /* ignore */
+      }
+      if (!res.ok) {
+        throw new Error(data.error || 'Could not send your order. Please try again.');
+      }
       showSuccess();
+    } catch (err) {
+      if (submitError) {
+        submitError.textContent =
+          err instanceof Error ? err.message : 'Could not send your order. Please try again.';
+        submitError.classList.add('visible');
+      }
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('is-loading');
     }
   });
 }

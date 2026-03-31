@@ -137,10 +137,26 @@
   gap: var(--space-sm);
 }
 
+.form-submit-error.visible {
+  display: block;
+  text-align: center;
+  margin-bottom: var(--space-sm);
+}
+
 .form-submit {
   width: 100%;
   justify-content: center;
   padding: 1rem 2rem;
+}
+
+.form-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-submit.is-loading {
+  position: relative;
 }
 
 .form-note {
