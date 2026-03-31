@@ -1,0 +1,169 @@
+/* ── Pricing Section ── */
+.pricing {
+  background: var(--color-bg-2);
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+/* ── Price Card ── */
+.price-card {
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: visible;
+}
+
+.price-card--popular {
+  border-color: rgba(255, 107, 43, 0.45) !important;
+  background: rgba(255, 107, 43, 0.06) !important;
+  animation: glowPulse 3s ease-in-out infinite;
+  transform: scale(1.03);
+}
+
+/* ── Popular Badge ── */
+.price-card__badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-brand);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+  color: var(--color-text-inverse);
+  font-size: 0.7rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  box-shadow: var(--shadow-glow-saffron);
+}
+
+/* ── Plan Name ── */
+.price-card__name {
+  font-size: var(--size-tag);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-saffron);
+  margin-bottom: var(--space-md);
+}
+
+/* ── Price ── */
+.price-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: var(--space-xs);
+}
+
+.price-currency {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  line-height: 1;
+}
+
+.price-value {
+  font-family: var(--font-mono);
+  font-size: clamp(2.5rem, 4vw, 3.2rem);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.price-period {
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+}
+
+.price-card__sub {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-xl);
+}
+
+/* ── Divider ── */
+.price-card__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin-block: var(--space-lg);
+}
+
+/* ── Features List ── */
+.price-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.price-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: var(--size-small);
+  color: var(--color-text-secondary);
+}
+
+.price-feature__check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(46, 204, 113, 0.12);
+  border: 1px solid rgba(46, 204, 113, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-size: 0.65rem;
+  color: var(--color-green-accent);
+}
+
+/* ── CTA ── */
+.price-card__cta {
+  width: 100%;
+  justify-content: center;
+}
+
+.price-card--popular .price-card__cta {
+  box-shadow: var(--shadow-glow-saffron);
+}
+
+/* ── Note below grid ── */
+.pricing__note {
+  text-align: center;
+  margin-top: var(--space-2xl);
+  font-size: var(--size-small);
+  color: var(--color-text-muted);
+  max-width: 680px;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
+.pricing__note strong {
+  color: var(--color-text-secondary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .price-card--popular {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin-inline: auto;
+  }
+}

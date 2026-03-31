@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DublinDabba — Freshly cooked Indian tiffin delivered to your door every weekday. Dublin's favourite home kitchen." />
+  <meta name="theme-color" content="#0a1a0f" />
+  <title>DublinDabba — Real Food. Real Home. Right to You.</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:opsz,wght@9..40,300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/features.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <link rel="stylesheet" href="css/how-it-works.css" />
+  <link rel="stylesheet" href="css/testimonials.css" />
+  <link rel="stylesheet" href="css/pricing.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav id="nav" class="nav">
+    <a href="#hero" class="nav__logo">
+      <span class="logo-mark">DD</span>
+      <span class="logo-text">DublinDabba</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="#features">Why Us</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#order">Contact</a></li>
+    </ul>
+    <a href="#order" class="btn btn--primary btn--sm nav__cta">Order Now</a>
+    <button class="nav__burger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <nav class="nav__mobile" id="navMobile" aria-hidden="true">
+    <a href="#features">Why Us</a>
+    <a href="#menu">Menu</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#order">Order Now</a>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero" class="section hero">
+
+    <!-- Animated Blobs -->
+    <div class="hero__blobs">
+      <div class="blob blob--1"></div>
+      <div class="blob blob--2"></div>
+      <div class="blob blob--3"></div>
+    </div>
+
+    <!-- Floating Food Illustrations -->
+    <div class="hero__floaters">
+      <!-- Tiffin Box -->
+      <div class="floater floater--1" data-speed="1.2">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="50" width="60" height="18" rx="4" fill="#FF6B2B" opacity="0.8"/>
+          <rect x="14" y="34" width="52" height="18" rx="3" fill="#FF8C5A" opacity="0.7"/>
+          <rect x="18" y="20" width="44" height="16" rx="3" fill="#FFD700" opacity="0.6"/>
+          <rect x="28" y="14" width="24" height="8" rx="4" fill="#FF6B2B" opacity="0.5"/>
+          <rect x="10" y="50" width="60" height="3" rx="1.5" fill="#FFD700" opacity="0.4"/>
+          <rect x="14" y="34" width="52" height="3" rx="1.5" fill="#FFD700" opacity="0.3"/>
+        </svg>
+      </div>
+      <!-- Chili Pepper -->
+      <div class="floater floater--2" data-speed="0.8">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 8 C32 8 35 10 36 14 C42 20 48 32 44 46 C40 54 24 56 20 44 C16 32 20 18 26 12 C27 10 28 8 30 8Z" fill="#FF6B2B" opacity="0.9"/>
+          <path d="M30 6 C30 6 28 2 32 2 C36 2 36 6 34 8 C32 8 30 8 30 8Z" fill="#2ECC71" opacity="0.8"/>
+          <path d="M28 20 C26 28 25 36 28 42" stroke="#FF8C5A" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+        </svg>
+      </div>
+      <!-- Curry Leaf -->
+      <div class="floater floater--3" data-speed="1.5">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="50" rx="18" ry="36" fill="#2ECC71" opacity="0.7"/>
+          <line x1="50" y1="14" x2="50" y2="86" stroke="#0a1a0f" stroke-width="2" opacity="0.4"/>
+          <line x1="50" y1="28" x2="38" y2="38" stroke="#0a1a0f" stroke-width="1.5" opacity="0.3"/>
+          <line x1="50" y1="38" x2="36" y2="48" stroke="#0a1a0f" stroke-width="1.5" opacity="0.3"/>
+          <line x1="50" y1="48" x2="36" y2="58" stroke="#0a1a0f" stroke-width="1.5" opacity="0.3"/>
+          <line x1="50" y1="28" x2="62" y2="38" stroke="#0a1a0f" stroke-width="1.5" opacity="0.3"/>
+          <line x1="50" y1="38" x2="64" y2="48" stroke="#0a1a0f" stroke-width="1.5" opacity="0.3"/>
+          <line x1="50" y1="48" x2="64" y2="58" stroke="#0a1a0f" stroke-width="1.5" opacity="0.3"/>
+        </svg>
+      </div>
+      <!-- Star Anise -->
+      <div class="floater floater--4" data-speed="1.0">
+        <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="35" cy="35" r="6" fill="#FFD700" opacity="0.9"/>
+          <line x1="35" y1="8" x2="35" y2="62" stroke="#FFD700" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+          <line x1="8" y1="35" x2="62" y2="35" stroke="#FFD700" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+          <line x1="16" y1="16" x2="54" y2="54" stroke="#FFD700" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+          <line x1="54" y1="16" x2="16" y2="54" stroke="#FFD700" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+          <circle cx="35" cy="35" r="4" fill="#FF6B2B" opacity="0.9"/>
+        </svg>
+      </div>
+      <!-- Cardamom Pod -->
+      <div class="floater floater--5" data-speed="0.6">
+        <svg viewBox="0 0 50 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="25" cy="42" rx="16" ry="24" fill="#2ECC71" opacity="0.65"/>
+          <line x1="25" y1="18" x2="25" y2="66" stroke="#0a1a0f" stroke-width="1.5" opacity="0.3"/>
+          <line x1="14" y1="30" x2="36" y2="30" stroke="#0a1a0f" stroke-width="1" opacity="0.2"/>
+          <line x1="12" y1="42" x2="38" y2="42" stroke="#0a1a0f" stroke-width="1" opacity="0.2"/>
+          <line x1="14" y1="54" x2="36" y2="54" stroke="#0a1a0f" stroke-width="1" opacity="0.2"/>
+          <path d="M25 4 C28 8 28 14 25 18 C22 14 22 8 25 4Z" fill="#FF6B2B" opacity="0.7"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero__content container">
+      <div class="hero__tag">Dublin's Favourite Home Kitchen — Delivered</div>
+
+      <h1 class="hero__headline">
+        <span class="line">Real Food.</span>
+        <span class="line"><em class="gradient-text">Real Home.</em></span>
+        <span class="line">Right to You.</span>
+      </h1>
+
+      <p class="hero__sub">
+        Freshly cooked Indian tiffin, prepared daily in Dublin's own kitchens.
+        No shortcuts, no preservatives — just the kind of meal that reminds you of home.
+      </p>
+
+      <div class="hero__ctas">
+        <a href="#pricing" class="btn btn--primary btn--lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Start Your Plan
+        </a>
+        <a href="#menu" class="btn btn--ghost btn--lg">Explore the Menu</a>
+      </div>
+
+      <div class="hero__trust">
+        <div class="trust-stars">
+          <span class="trust-star">★</span>
+          <span class="trust-star">★</span>
+          <span class="trust-star">★</span>
+          <span class="trust-star">★</span>
+          <span class="trust-star">★</span>
+        </div>
+        <span class="trust-text">Trusted by 500+ Dubliners</span>
+        <span class="trust-badge">✓ FSAI Registered</span>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero__scroll">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FEATURES / WHY US
+  ═══════════════════════════════════════ -->
+  <section id="features" class="section features">
+    <div class="container">
+      <div class="section-label">Why DublinDabba</div>
+      <h2 class="section-title">Food That Feels Like <span class="gradient-text">Home</span></h2>
+
+      <div class="features__grid">
+
+        <!-- Card 1 -->
+        <div class="glass-card feature-card">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+              <path d="M12 2 C12 2 10 5 12 8 C14 5 12 2 12 2Z" fill="currentColor" opacity="0.6"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Home-Cooked Daily</h3>
+          <p class="feature-card__text">Prepared fresh each morning by local Dublin families using traditional recipes passed down through generations. Never batch-frozen. Never reheated.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-card feature-card">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 12l2 2 4-4"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Wholesome Ingredients</h3>
+          <p class="feature-card__text">No artificial colours, flavours or preservatives. We source seasonal vegetables from trusted Irish-Indian grocery partners. What you see is what you eat.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-card feature-card">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Lunchtime Delivery</h3>
+          <p class="feature-card__text">Delivered to your door or office between 11:30 AM and 1:30 PM, Monday to Saturday. Hot, sealed, and ready to enjoy — right on time.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-card feature-card">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3 class="feature-card__title">100% Dublin-Made</h3>
+          <p class="feature-card__text">From our kitchen to your door — all within Dublin. We cover Dublin 1–24, city centre and suburbs. Same-day delivery, no delays, no middle-men.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       MENU PREVIEW
+  ═══════════════════════════════════════ -->
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="menu__header">
+        <div>
+          <div class="section-label">Today's Selections</div>
+          <h2 class="section-title">What's in the <span class="gradient-text">Dabba</span></h2>
+        </div>
+        <a href="#order" class="btn btn--ghost btn--sm">Request Custom Meal</a>
+      </div>
+
+      <!-- Tabs -->
+      <div class="menu__tabs" role="tablist">
+        <button class="menu__tab active" role="tab" data-tab="veg" aria-selected="true">🌿 Vegetarian</button>
+        <button class="menu__tab" role="tab" data-tab="nonveg" aria-selected="false">🍗 Non-Veg</button>
+        <button class="menu__tab" role="tab" data-tab="jain" aria-selected="false">🌸 Jain</button>
+      </div>
+
+      <!-- Veg Panel -->
+      <div class="menu__panel active" id="panel-veg" role="tabpanel">
+        <div class="menu__grid">
+
+          <div class="meal-card">
+            <div class="meal-card__image">
+              <span class="meal-tag meal-tag--veg">Veg</span>
+              🫕
+            </div>
+            <div class="meal-card__body">
+              <h3 class="meal-card__name">Dal Makhani Thali</h3>
+              <p class="meal-card__desc">Rich black lentil curry slow-cooked overnight, served with 2 rotis, steamed basmati rice, and house pickle.</p>
+              <div class="meal-card__meta">
+                <span class="meal-card__cal">🔥 480 kcal</span>
+                <span class="meal-card__portion">Full Thali</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meal-card">
+            <div class="meal-card__image">
+              <span class="meal-tag meal-tag--veg">Veg</span>
+              🍛
+            </div>
+            <div class="meal-card__body">
+              <h3 class="meal-card__name">Paneer Butter Masala</h3>
+              <p class="meal-card__desc">Soft cottage cheese cubes in a velvety tomato-cream gravy, served with jeera rice and cooling raita.</p>
+              <div class="meal-card__meta">
+                <span class="meal-card__cal">🔥 520 kcal</span>
+                <span class="meal-card__portion">Full Portion</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meal-card">
+            <div class="meal-card__image">
+              <span class="meal-tag meal-tag--veg">Veg</span>
+              🥘
+            </div>
+            <div class="meal-card__body">
+              <h3 class="meal-card__name">Aloo Gobi Tiffin</h3>
+              <p class="meal-card__desc">Dry-spiced potato and cauliflower stir-fry with yellow dal, fresh rotis, and a crisp garden salad.</p>
+              <div class="meal-card__meta">
+                <span class="meal-card__cal">🔥 420 kcal</span>
+                <span class="meal-card__portion">Standard Tiffin</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Non-Veg Panel -->
+      <div class="menu__panel" id="panel-nonveg" role="tabpanel">
+        <div class="menu__grid">
+
+          <div class="meal-card">
+            <div class="meal-card__image">
+              <span class="meal-tag meal-tag--nonveg">Non-Veg</span>
+              🍛
+            </div>
+            <div class="meal-card__body">
+              <h3 class="meal-card__name">Chicken Tikka Masala</h3>
+              <p class="meal-card__desc">The Dublin favourite — tender marinated chicken in a smoky, spiced tomato gravy with basmati rice, naan, and raita.</p>
+              <div class="meal-card__meta">
+                <span class="meal-card__cal">🔥 580 kcal</span>
+                <span class="meal-card__portion">Full Thali</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meal-card">
+            <div class="meal-card__image">
+              <span class="meal-tag meal-tag--nonveg">Non-Veg</span>
+              🫕
+            </div>
+            <div class="meal-card__body">
+              <h3 class="meal-card__name">Lamb Keema Tiffin</h3>
+              <p class="meal-card__desc">Aromatic spiced minced lamb with green peas, served with 2 rotis, yellow dal, and house pickle.</p>
+              <div class="meal-card__meta">
+                <span class="meal-card__cal">🔥 610 kcal</span>
+                <span class="meal-card__portion">Full Portion</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meal-card">
+            <div class="meal-card__image">
+              <span class="meal-tag meal-tag--nonveg">Non-Veg</span>
+              🍗
+            </div>
+            <div class="meal-card__body">
+              <h3 class="meal-card__name">Butter Chicken Thali</h3>
+              <p class="meal-card__desc">Silky tomato-cream sauce with succulent chicken, served with fragrant basmati and a fresh garden salad.</p>
+              <div class="meal-card__meta">
+                <span class="meal-card__cal">🔥 560 kcal</span>
+                <span class="meal-card__portion">Full Thali</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Jain Panel -->
+      <div class="menu__panel" id="panel-jain" role="tabpanel">
+        <div class="menu__grid">
+
+          <div class="meal-card">
+            <div class="meal-card__image">
+              <span class="meal-tag meal-tag--jain">Jain</span>
+              🌿
+            </div>
+            <div class="meal-card__body">
+              <h3 class="meal-card__name">Jain Lauki Dal</h3>
+              <p class="meal-card__desc">Gentle bottle gourd and toor dal cooked without root vegetables. Served with 2 phulkas and dry sabzi.</p>
+              <div class="meal-card__meta">
+                <span class="meal-card__cal">🔥 390 kcal</span>
+                <span class="meal-card__portion">Standard Tiffin</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meal-card">
+            <div class="meal-card__image">
+              <span class="meal-tag meal-tag--jain">Jain</span>
+              🫙
+            </div>
+            <div class="meal-card__body">
+              <h3 class="meal-card__name">Jain Kadhi Chawal</h3>
+              <p class="meal-card__desc">Tangy yoghurt-besan kadhi, no onion no garlic, with steamed basmati rice and a dry peas sabzi.</p>
+              <div class="meal-card__meta">
+                <span class="meal-card__cal">🔥 430 kcal</span>
+                <span class="meal-card__portion">Full Portion</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="meal-card">
+            <div class="meal-card__image">
+              <span class="meal-tag meal-tag--jain">Jain</span>
+              🥗
+            </div>
+            <div class="meal-card__body">
+              <h3 class="meal-card__name">Jain Chana Thali</h3>
+              <p class="meal-card__desc">Spiced chickpea masala (no onion/garlic/root veg), with bajra roti, rice, and sweet fennel chutney.</p>
+              <div class="meal-card__meta">
+                <span class="meal-card__cal">🔥 460 kcal</span>
+                <span class="meal-card__portion">Full Thali</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════ -->
+  <section id="how-it-works" class="section how">
+    <div class="container">
+      <div class="section-label">The Process</div>
+      <h2 class="section-title">Three Steps to <span class="gradient-text">Happiness</span></h2>
+
+      <div class="how__steps">
+
+        <!-- Step 1 -->
+        <div class="how__step">
+          <span class="how__number">01</span>
+          <div class="how__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+            </svg>
+          </div>
+          <h3 class="how__step-title">Choose Your Plan</h3>
+          <p class="how__step-text">Pick daily, weekly, or monthly. Select vegetarian, non-veg, or Jain. Choose your delivery slot — morning or lunchtime. Completely flexible.</p>
+        </div>
+
+        <div class="how__connector"></div>
+
+        <!-- Step 2 -->
+        <div class="how__step">
+          <span class="how__number">02</span>
+          <div class="how__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <h3 class="how__step-title">We Cook Fresh</h3>
+          <p class="how__step-text">Every morning our Dublin kitchen preps your tiffin from scratch — grounded spices, fresh vegetables, slow-cooked curries. Packed hot and sealed airtight.</p>
+        </div>
+
+        <div class="how__connector"></div>
+
+        <!-- Step 3 -->
+        <div class="how__step">
+          <span class="how__number">03</span>
+          <div class="how__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/>
+            </svg>
+          </div>
+          <h3 class="how__step-title">We Deliver to You</h3>
+          <p class="how__step-text">Your dabba arrives by 1 PM. Leave feedback via WhatsApp — we adjust to your spice level, portion preference, and dietary needs. Every time.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════ -->
+  <section id="testimonials" class="section testimonials">
+    <div class="section-label">What Dublin Says</div>
+    <h2 class="section-title">Loved by the <span class="gradient-text">Community</span></h2>
+
+    <div class="marquee__wrapper">
+      <div class="marquee__track">
+
+        <!-- Cards (will be duplicated in JS for infinite loop) -->
+        <div class="review-card">
+          <div class="review-card__quote">"</div>
+          <p class="review-card__text">I've been ordering for 6 months. It's genuinely better than any restaurant I've tried. My kids ask for it by name now.</p>
+          <div class="review-card__footer">
+            <div class="review-card__author">
+              <span class="review-card__name">Priya M.</span>
+              <span class="review-card__location">Rathmines, Dublin 6</span>
+            </div>
+            <div class="review-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__quote">"</div>
+          <p class="review-card__text">As someone who had never eaten Indian food, DublinDabba got me hooked. The butter chicken is genuinely incredible. I'm a convert.</p>
+          <div class="review-card__footer">
+            <div class="review-card__author">
+              <span class="review-card__name">Conor B.</span>
+              <span class="review-card__location">Sandyford, Dublin 18</span>
+            </div>
+            <div class="review-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__quote">"</div>
+          <p class="review-card__text">Halal options, fresh daily, and delivered on time every single day. This is exactly what our community needed in Dublin. Truly brilliant.</p>
+          <div class="review-card__footer">
+            <div class="review-card__author">
+              <span class="review-card__name">Fatima A.</span>
+              <span class="review-card__location">Blanchardstown, Dublin 15</span>
+            </div>
+            <div class="review-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__quote">"</div>
+          <p class="review-card__text">Tastes exactly like my mum's cooking in Chennai. I nearly cried when I had the sambar rice. Three years in Dublin and this is home.</p>
+          <div class="review-card__footer">
+            <div class="review-card__author">
+              <span class="review-card__name">Raj K.</span>
+              <span class="review-card__location">Clonskeagh, Dublin 14</span>
+            </div>
+            <div class="review-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__quote">"</div>
+          <p class="review-card__text">The weekly plan is such great value. My lunch break is now genuinely the best part of my working day. Worth every cent.</p>
+          <div class="review-card__footer">
+            <div class="review-card__author">
+              <span class="review-card__name">Sarah L.</span>
+              <span class="review-card__location">Drumcondra, Dublin 9</span>
+            </div>
+            <div class="review-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__quote">"</div>
+          <p class="review-card__text">Consistent, delicious, and the portion sizes are very generous. I told my whole office about it — now half of them are ordering too!</p>
+          <div class="review-card__footer">
+            <div class="review-card__author">
+              <span class="review-card__name">Amir H.</span>
+              <span class="review-card__location">Tallaght, Dublin 24</span>
+            </div>
+            <div class="review-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__quote">"</div>
+          <p class="review-card__text">I requested less spice and they remembered it every single time without me asking again. That personal touch means everything.</p>
+          <div class="review-card__footer">
+            <div class="review-card__author">
+              <span class="review-card__name">Niamh O'D.</span>
+              <span class="review-card__location">Ranelagh, Dublin 6</span>
+            </div>
+            <div class="review-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-card__quote">"</div>
+          <p class="review-card__text">Been in Dublin 3 years and this is the only food that's made it feel like home. The dal makhani is something else. 10/10 every time.</p>
+          <div class="review-card__footer">
+            <div class="review-card__author">
+              <span class="review-card__name">Vikram P.</span>
+              <span class="review-card__location">Swords, Dublin</span>
+            </div>
+            <div class="review-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       PRICING
+  ═══════════════════════════════════════ -->
+  <section id="pricing" class="section pricing">
+    <div class="container">
+      <div class="section-label">Flexible Plans</div>
+      <h2 class="section-title">Pick Your <span class="gradient-text">Dabba Plan</span></h2>
+
+      <div class="pricing__grid">
+
+        <!-- Sampler -->
+        <div class="glass-card price-card">
+          <div class="price-card__name">Sampler</div>
+          <div class="price-card__price">
+            <span class="price-currency">€</span>
+            <span class="price-value" data-target="8">8</span>
+            <span class="price-period">/ meal</span>
+          </div>
+          <p class="price-card__sub">1 tiffin · No commitment · Any day</p>
+          <div class="price-card__divider"></div>
+          <ul class="price-card__features">
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Choose your meal daily</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>No subscription required</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Delivery anywhere in Dublin</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Veg / Non-Veg / Jain options</span></li>
+          </ul>
+          <a href="#order" class="btn btn--ghost price-card__cta">Try Today</a>
+        </div>
+
+        <!-- Regular (Popular) -->
+        <div class="glass-card price-card price-card--popular">
+          <div class="price-card__badge">Most Popular</div>
+          <div class="price-card__name">Regular</div>
+          <div class="price-card__price">
+            <span class="price-currency">€</span>
+            <span class="price-value" data-target="38">38</span>
+            <span class="price-period">/ week</span>
+          </div>
+          <p class="price-card__sub">5 tiffins · Mon–Fri · Save €2/meal</p>
+          <div class="price-card__divider"></div>
+          <ul class="price-card__features">
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Lock in price guarantee</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Skip days anytime (24h notice)</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Priority delivery slot</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>WhatsApp meal feedback</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Dietary customisation</span></li>
+          </ul>
+          <a href="#order" class="btn btn--primary price-card__cta">Start Weekly Plan</a>
+        </div>
+
+        <!-- Family -->
+        <div class="glass-card price-card">
+          <div class="price-card__name">Family</div>
+          <div class="price-card__price">
+            <span class="price-currency">€</span>
+            <span class="price-value" data-target="130">130</span>
+            <span class="price-period">/ month</span>
+          </div>
+          <p class="price-card__sub">22 tiffins · Best value · €5.90/meal</p>
+          <div class="price-card__divider"></div>
+          <ul class="price-card__features">
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Fully customised monthly menu</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Free bonus meal on Fridays</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Dedicated meal liaison</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Invoice-based billing for offices</span></li>
+            <li class="price-feature"><span class="price-feature__check">✓</span><span>Bulk family portions available</span></li>
+          </ul>
+          <a href="#order" class="btn btn--ghost price-card__cta">Go Monthly</a>
+        </div>
+
+      </div>
+
+      <p class="pricing__note">
+        <strong>All plans include:</strong> eco-friendly packaging, airtight tiffin containers, halal / veg / jain filters,
+        delivery within Dublin, and our happiness guarantee — if you're not satisfied, we'll make it right.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       CONTACT / ORDER
+  ═══════════════════════════════════════ -->
+  <section id="order" class="section">
+    <div class="container">
+      <div class="contact__grid">
+
+        <!-- Form Column -->
+        <div class="contact__form-wrap">
+          <div class="section-label">Get Started</div>
+          <h2 class="section-title">Order Your First <span class="gradient-text">Dabba</span></h2>
+
+          <form class="order-form" id="orderForm" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name</label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" />
+                <span class="form-error" id="name-error">Please enter your name.</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+                <span class="form-error" id="email-error">Please enter a valid email.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone (WhatsApp preferred)</label>
+                <input class="form-input" type="tel" id="phone" name="phone" placeholder="+353 87 XXX XXXX" autocomplete="tel" />
+                <span class="form-error" id="phone-error">Please enter your phone number.</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="address">Delivery Address</label>
+                <input class="form-input" type="text" id="address" name="address" placeholder="Street address, Dublin" autocomplete="street-address" />
+                <span class="form-error" id="address-error">Please enter your Dublin address.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Choose Plan</label>
+              <div class="form-radio-group">
+                <label class="form-radio-label">
+                  <input type="radio" name="plan" value="daily" /> Daily (€8/meal)
+                </label>
+                <label class="form-radio-label">
+                  <input type="radio" name="plan" value="weekly" checked /> Weekly (€38/week)
+                </label>
+                <label class="form-radio-label">
+                  <input type="radio" name="plan" value="monthly" /> Monthly (€130/month)
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Dietary Preference</label>
+              <div class="form-radio-group">
+                <label class="form-radio-label">
+                  <input type="radio" name="diet" value="veg" checked /> 🌿 Vegetarian
+                </label>
+                <label class="form-radio-label">
+                  <input type="radio" name="diet" value="nonveg" /> 🍗 Non-Vegetarian
+                </label>
+                <label class="form-radio-label">
+                  <input type="radio" name="diet" value="jain" /> 🌸 Jain
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Any special requests? (optional)</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="e.g. less spice, no nuts, extra rice..."></textarea>
+            </div>
+
+            <div class="form-submit-wrap">
+              <button type="submit" class="btn btn--primary btn--lg form-submit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                Send My Order Request
+              </button>
+              <p class="form-note">We'll confirm via WhatsApp within 2 hours · Mon–Sat</p>
+            </div>
+
+            <div class="form-success" id="formSuccess">
+              ✓ Your order request has been received! We'll WhatsApp you within 2 hours to confirm your first delivery. Welcome to DublinDabba!
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Info Column -->
+        <div class="contact__info">
+          <div>
+            <h3 class="contact__info-title">Get in Touch</h3>
+            <div class="contact__details">
+
+              <div class="contact__detail">
+                <div class="contact__detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <div class="contact__detail-label">Delivery Hours</div>
+                  <div class="contact__detail-value">Monday – Saturday<br />11:30 AM – 1:30 PM</div>
+                </div>
+              </div>
+
+              <div class="contact__detail">
+                <div class="contact__detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+                </div>
+                <div>
+                  <div class="contact__detail-label">WhatsApp</div>
+                  <div class="contact__detail-value">+353 87 XXX XXXX<br /><small style="color:var(--color-text-muted)">Preferred for order updates</small></div>
+                </div>
+              </div>
+
+              <div class="contact__detail">
+                <div class="contact__detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="contact__detail-label">Email</div>
+                  <div class="contact__detail-value">hello@dublindabba.ie</div>
+                </div>
+              </div>
+
+              <div class="contact__detail">
+                <div class="contact__detail-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div class="contact__detail-label">Delivery Area</div>
+                  <div class="contact__detail-value">All of Dublin 1–24<br />City centre &amp; suburbs</div>
+                  <div class="areas-chips">
+                    <span class="area-chip">D1</span><span class="area-chip">D2</span><span class="area-chip">D4</span>
+                    <span class="area-chip">D6</span><span class="area-chip">D7</span><span class="area-chip">D8</span>
+                    <span class="area-chip">D9</span><span class="area-chip">D12</span><span class="area-chip">D14</span>
+                    <span class="area-chip">D15</span><span class="area-chip">D18</span><span class="area-chip">D24</span>
+                    <span class="area-chip">+ more</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="map-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Dublin, Ireland</span>
+            <span style="font-size:0.72rem; color:var(--color-text-muted)">Delivering across all Dublin postcodes</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo nav__logo">
+            <span class="logo-mark">DD</span>
+            <span class="logo-text">DublinDabba</span>
+          </a>
+          <p class="footer__tagline">Real food, real home. Freshly cooked Indian tiffin delivered daily across Dublin — because you deserve more than a sad desk sandwich.</p>
+          <div class="footer__socials">
+            <!-- Instagram -->
+            <a href="#" class="social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="#" class="social-btn" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="#features">About Us</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#order">Careers</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Support</h4>
+          <ul class="footer__links">
+            <li><a href="#order">Contact Us</a></li>
+            <li><a href="#order">FAQs</a></li>
+            <li><a href="#order">Delivery Zones</a></li>
+            <li><a href="#order">Track Order</a></li>
+            <li><a href="#order">Feedback</a></li>
+          </ul>
+        </div>
+
+        <!-- Dietary -->
+        <div class="footer__col">
+          <h4 class="footer__col-title">Dietary Options</h4>
+          <ul class="footer__links">
+            <li><a href="#menu">Vegetarian</a></li>
+            <li><a href="#menu">Non-Vegetarian</a></li>
+            <li><a href="#menu">Jain</a></li>
+            <li><a href="#menu">Halal Certified</a></li>
+            <li><a href="#menu">Allergen Info</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer__bottom">
+        <p class="footer__copy">
+          © 2025 DublinDabba. Made with <span>♥</span> in Dublin, Ireland. FSAI Registered.
+        </p>
+        <div class="footer__legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════
+       SCRIPTS
+  ═══════════════════════════════════════ -->
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- App -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
