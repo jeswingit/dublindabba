@@ -1,6 +1,29 @@
 const { createClient } = require('@supabase/supabase-js');
 
-function readJsonBody(req) {
+/** Vercel pre-parses JSON into req.body — reading the stream again yields nothing. */
+function getJsonBody(req) {
+  const b = req.body;
+  if (b !== undefined && b !== null && b !== '') {
+    if (typeof b === 'string') {
+      try {
+        return b ? JSON.parse(b) : {};
+      } catch {
+        return {};
+      }
+    }
+    if (Buffer.isBuffer(b)) {
+      const raw = b.toString('utf8');
+      try {
+        return raw ? JSON.parse(raw) : {};
+      } catch {
+        return {};
+      }
+    }
+    if (typeof b === 'object') {
+      return b;
+    }
+  }
+
   return new Promise((resolve, reject) => {
     const chunks = [];
     req.on('data', (chunk) => chunks.push(chunk));
@@ -14,10 +37,6 @@ function readJsonBody(req) {
     });
     req.on('error', reject);
   });
-}
-
-function isNonEmptyString(v) {
-  return typeof v === 'string' && v.trim().length > 0;
 }
 
 module.exports = async (req, res) => {
@@ -40,7 +59,7 @@ module.exports = async (req, res) => {
 
   let body;
   try {
-    body = await readJsonBody(req);
+    body = await Promise.resolve(getJsonBody(req));
   } catch {
     return res.status(400).json({ error: 'Invalid request body' });
   }
