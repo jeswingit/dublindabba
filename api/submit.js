@@ -50,11 +50,25 @@ module.exports = async (req, res) => {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const supabaseUrl = process.env.SUPABASE_URL;
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const supabaseUrl = (process.env.SUPABASE_URL || '').trim().replace(/\/$/, '');
+  const serviceKey = (process.env.SUPABASE_SERVICE_ROLE_KEY || '').trim();
 
   if (!supabaseUrl || !serviceKey) {
     return res.status(500).json({ error: 'Server is not configured for orders yet.' });
+  }
+
+  if (serviceKey.startsWith('eyJ') && serviceKey.split('.').length === 3) {
+    try {
+      const payload = JSON.parse(Buffer.from(serviceKey.split('.')[1], 'base64url').toString('utf8'));
+      if (payload.role !== 'service_role') {
+        return res.status(500).json({
+          error:
+            'Wrong Supabase key: use the service_role secret from Settings → API, not the anon public key.',
+        });
+      }
+    } catch {
+      /* JWT parse failed — still try Supabase; may be non-JWT test key */
+    }
   }
 
   let body;
@@ -102,8 +116,30 @@ module.exports = async (req, res) => {
   });
 
   if (error) {
-    console.error('Supabase insert error:', error);
-    return res.status(500).json({ error: 'Could not save your order. Please try again.' });
+    console.error('Supabase insert error:', error.code, error.message, error.details);
+    const msg = (error.message || '').toLowerCase();
+    let userMsg = 'Could not save your order. Please try again.';
+
+    if (error.code === 'PGRST205' || msg.includes('could not find the table')) {
+      userMsg =
+        'Orders table is missing. In Supabase open SQL Editor and run the full supabase-schema.sql script, then try again.';
+    } else if (
+      msg.includes('row-level security') ||
+      msg.includes('violates row-level security') ||
+      error.code === '42501'
+    ) {
+      userMsg =
+        'Database blocked the save. In Vercel set SUPABASE_SERVICE_ROLE_KEY to the service_role key (Settings → API in Supabase), redeploy, and try again.';
+    } else if (
+      msg.includes('jwt') ||
+      msg.includes('invalid api key') ||
+      error.code === 'PGRST301'
+    ) {
+      userMsg =
+        'Invalid Supabase API key. Copy the service_role key again from Supabase → Settings → API and update Vercel env vars.';
+    }
+
+    return res.status(500).json({ error: userMsg });
   }
 
   return res.status(201).json({ ok: true });
